@@ -2,7 +2,7 @@
   "name": "uuidgen",
   "main": "./lib/uuidgen",
   "version": "1.0.0",
-  "description": "A package to generate uuidgen",
+  "description": "A package to generate UUIDs",
   "activationEvents": [],
   "repository": "https://github.com/nrodrigues/uuidgen",
   "license": "MIT",
