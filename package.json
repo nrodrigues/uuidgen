@@ -1,0 +1,15 @@
+{
+  "name": "uuidgen",
+  "main": "./lib/uuidgen",
+  "version": "0.0.0",
+  "description": "A package to generate uuidgen",
+  "activationEvents": [],
+  "repository": "https://github.com/nrodrigues/uuidgen",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+      "node-uuid": "1.4.1"
+  }
+}
