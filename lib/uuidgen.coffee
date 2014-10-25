@@ -1,4 +1,4 @@
-uuid = require('node-uuid')
+uuid = null
 
 module.exports =
 
@@ -6,6 +6,7 @@ module.exports =
       atom.workspaceView.command "uuidgen:generate", => @generate()
 
   generate: ->
+      uuid ?= require('node-uuid')
       editor = atom.workspace.activePaneItem
       if editor
           editor.insertText(uuid.v4())
