@@ -1,7 +1,7 @@
 {
   "name": "uuidgen",
   "main": "./lib/uuidgen",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A package to generate UUIDs",
   "activationEvents": [],
   "repository": "https://github.com/nrodrigues/uuidgen",
