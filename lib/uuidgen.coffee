@@ -3,10 +3,10 @@ uuid = null
 module.exports =
 
   activate: ->
-      atom.workspaceView.command "uuidgen:generate", => @generate()
+      atom.commands.add 'atom-text-editor', 'uuidgen:generate': => @generate()
 
   generate: ->
       uuid ?= require('node-uuid')
-      editor = atom.workspace.activePaneItem
+      editor = atom.workspace.getActiveTextEditor()
       if editor
           editor.insertText(uuid.v4())
