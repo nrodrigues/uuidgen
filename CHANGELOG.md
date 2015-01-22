@@ -1,4 +1,4 @@
-## 1.0.5 - Api compat edition
+## 1.0.6 - Api compat edition
 * Avoid deprecated apis
 
 ## 1.0.4 - Horse racing edition
