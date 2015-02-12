@@ -9,4 +9,6 @@ module.exports =
       uuid ?= require('node-uuid')
       editor = atom.workspace.getActiveTextEditor()
       if editor
-          editor.insertText(uuid.v4())
+          sels = editor.getSelectionsOrderedByBufferPosition()
+          for sel in sels
+              sel.insertText(uuid.v4())
