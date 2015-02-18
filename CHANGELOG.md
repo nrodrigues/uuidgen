@@ -1,3 +1,7 @@
+## 1.1.0 - Multiple cursors
+* Add support for generating uuids at multiple locations at once
+    (thanks https://github.com/espresso3389)
+
 ## 1.0.6 - Api compat edition
 * Avoid deprecated apis
 
