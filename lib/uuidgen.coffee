@@ -1,23 +1,18 @@
-uuid = null
+uuid = require('node-uuid')
 
 module.exports =
 
   activate: ->
-      atom.commands.add 'atom-text-editor', 'uuidgen:generate': => @generate()
-      atom.commands.add 'atom-text-editor', 'uuidgen:generatecap': => @generatecap()
+      atom.commands.add 'atom-text-editor', 'uuidgen:generate': => @generate(false)
+      atom.commands.add 'atom-text-editor', 'uuidgen:generatecap': => @generate(true)
 
-  generate: ->
+  generate: (caps) ->
       uuid ?= require('node-uuid')
       editor = atom.workspace.getActiveTextEditor()
       if editor
           sels = editor.getSelectionsOrderedByBufferPosition()
           for sel in sels
-              sel.insertText(uuid.v4())
-
-  generatecap: ->
-      uuid ?= require('node-uuid')
-      editor = atom.workspace.getActiveTextEditor()
-      if editor
-          sels = editor.getSelectionsOrderedByBufferPosition()
-          for sel in sels
-              sel.insertText(uuid.v4().toUpperCase())
+              if caps
+                  sel.insertText(uuid.v4().toUpperCase())
+              else
+                  sel.insertText(uuid.v4())
