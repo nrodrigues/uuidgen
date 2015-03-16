@@ -9,3 +9,4 @@
 # https://atom.io/docs/latest/advanced/keymaps
 'atom-workspace':
   'alt-cmd-g': 'uuidgen:generate'
+  'alt-cmd-shift-g': 'uuidgen:generatecap'

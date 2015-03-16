@@ -6,6 +6,7 @@
       'label': 'UUID Gen'
       'submenu': [
         { 'label': 'Generate', 'command': 'uuidgen:generate' }
+        { 'label': 'Generate Capitelized', 'command': 'uuidgen:generatecap' }
       ]
     ]
   }
