@@ -1,4 +1,4 @@
-uuid = require('node-uuid')
+uuid = null
 
 module.exports =
 
