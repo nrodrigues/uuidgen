@@ -1,3 +1,7 @@
+## 1.2.0 - Capitalized uuids
+* Add support for generating capitalized uuids
+    (thanks https://github.com/Hiiragisan09)
+
 ## 1.1.0 - Multiple cursors
 * Add support for generating uuids at multiple locations at once
     (thanks https://github.com/espresso3389)
