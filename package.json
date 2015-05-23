@@ -1,12 +1,15 @@
 {
   "name": "uuidgen",
   "main": "./lib/uuidgen",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A package to generate UUIDs",
   "repository": "https://github.com/nrodrigues/uuidgen",
   "license": "MIT",
   "activationCommands": {
-    "atom-text-editor": [ "uuidgen:generate", "uuidgen:generate-upper-case" ]
+    "atom-text-editor": [
+      "uuidgen:generate",
+      "uuidgen:generate-upper-case"
+    ]
   },
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
