@@ -3,8 +3,12 @@ uuid = null
 module.exports =
 
   activate: ->
-      atom.commands.add 'atom-text-editor', 'uuidgen:generate': => @generate(false)
-      atom.commands.add 'atom-text-editor', 'uuidgen:generatecap': => @generate(true)
+      commandSubscription = atom.commands.add 'atom-text-editor',
+        'uuidgen:generate': => @generate(false)
+        'uuidgen:generate-upper-case': => @generate(true)
+
+  dispose: ->
+      commandSubscription.dispose()
 
   generate: (caps) ->
       uuid ?= require('node-uuid')

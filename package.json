@@ -3,11 +3,13 @@
   "main": "./lib/uuidgen",
   "version": "1.2.0",
   "description": "A package to generate UUIDs",
-  "activationEvents": [],
   "repository": "https://github.com/nrodrigues/uuidgen",
   "license": "MIT",
+  "activationCommands": {
+    "atom-text-editor": [ "uuidgen:generate", "uuidgen:generate-upper-case" ]
+  },
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
     "node-uuid": "1.4.1"
