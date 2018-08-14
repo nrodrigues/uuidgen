@@ -16,9 +16,10 @@ module.exports =
       if editor
           editor.transact(()=>
               sels = editor.getSelectionsOrderedByBufferPosition()
+              generatedUUID = uuid.v4()
               for sel in sels
                   if caps
-                      sel.insertText(uuid.v4().toUpperCase())
+                      sel.insertText(generatedUUID.toUpperCase())
                   else
-                      sel.insertText(uuid.v4())
+                      sel.insertText(generatedUUID)
           )
