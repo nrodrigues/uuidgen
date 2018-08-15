@@ -14,9 +14,12 @@ module.exports =
       uuid ?= require('node-uuid')
       editor = atom.workspace.getActiveTextEditor()
       if editor
-          sels = editor.getSelectionsOrderedByBufferPosition()
-          for sel in sels
-              if caps
-                  sel.insertText(uuid.v4().toUpperCase())
-              else
-                  sel.insertText(uuid.v4())
+          editor.transact(()=>
+              sels = editor.getSelectionsOrderedByBufferPosition()
+              generatedUUID = uuid.v4()
+              for sel in sels
+                  if caps
+                      sel.insertText(generatedUUID.toUpperCase())
+                  else
+                      sel.insertText(generatedUUID)
+          )
